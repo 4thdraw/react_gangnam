@@ -1,16 +1,16 @@
-import Notice from './component/Notice';
-import noticedb from './data/notice.json';
-
-
-function App() {
-  const noticejs = noticedb;
+import Hd from './component/Hd';
+import Work from './component/Work';
+function App() { 
   return (
     <div className="App">
-    {/* 컴포넌트 자바스크립트실행문!! 옵션 매개인자이해 */}
-      <Notice title={noticejs.title} 
-              cls = {noticejs.cls}
-              contents={noticejs.content}></Notice>
-     
+   {/* 부트스트랩의 그리드 시스템을 활용해서 빠른 제작구현 */}
+      <Hd bgColor='bg-white'></Hd>
+      <div id="portfolio" className='pt-5'>
+        <h2 className='mt-5 pt-5 text-center'>나의 작품~</h2>
+        <Work contentId="react" title="리액트"></Work>
+        <Work contentId="ec" title="쇼핑몰"></Work>
+      </div>
+      
     </div>
   );
 }
